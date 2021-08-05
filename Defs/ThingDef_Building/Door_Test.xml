@@ -12,7 +12,7 @@
 		<canOverlapZones>false</canOverlapZones>
 		<!--todo: change-->
 		<graphicData>
-		  <texPath>Things/Building/Misc/EggBox</texPath>
+		  <texPath>Things/Building/Misc/AnimalBed</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shadowData>
 			<volume>(1,0.5,1)</volume>
@@ -34,78 +34,9 @@
 		  <Mass>3</Mass>
 		</statBases>
 		<!--todo: change-->
-		<comps>
-		  <li Class="CompProperties_ThingContainer">
-			<compClass>CompEggContainer</compClass>
-			<stackLimit>25</stackLimit>
-			<minCountToEmpty>20</minCountToEmpty>
-			<drawStackLabel>true</drawStackLabel>
-		  </li>
-		</comps>
 		<stuffCategories>
 		  <li>Metallic</li>
 		</stuffCategories>
-		<!--todo: change-->
-		<costStuffCount>20</costStuffCount>
-		<passability>PassThroughOnly</passability>
-		<pathCost>20</pathCost>
-		<designationCategory>Misc</designationCategory>
-		<rotatable>false</rotatable>
-		<!--todo: change-->
-		<costList>
-		  <Steel>180</Steel>
-		  <Uranium>5</Uranium>
-		  <ComponentIndustrial>4</ComponentIndustrial>
-		  <ComponentSpacer>1</ComponentSpacer>
-		</costList>
-	</ThingDef>
-
-	<ThingDef ParentName="BuildingBase">
-		<defName>TeleporterPanel</defName>
-		<label>teleporter panel</label>
-		<description>A panel to teleport items.</description>
-		<drawerType>MapMeshAndRealTime</drawerType>
-		<fillPercent>0</fillPercent>
-		<tickerType>normal</tickerType>
-		<drawGUIOverlay>true</drawGUIOverlay>
-		<canOverlapZones>true</canOverlapZones>
-		<!--todo: change-->
-		<graphicData>
-		  <texPath>Things/Building/Misc/EggBox</texPath>
-		  <graphicClass>Graphic_Single</graphicClass>
-		  <shadowData>
-			<volume>(1,0.5,1)</volume>
-		  </shadowData>
-		  <damageData>
-			<rect>(0,0,1,1)</rect>
-		  </damageData>
-		</graphicData>
-		<altitudeLayer>Building</altitudeLayer>
-		<minifiedDef>MinifiedThing</minifiedDef>
-		<thingCategories>
-		  <li>BuildingsMisc</li>
-		</thingCategories>
-		<!--todo: change-->
-		<statBases>
-		  <MaxHitPoints>50</MaxHitPoints>
-		  <WorkToBuild>2000</WorkToBuild>
-		  <Flammability>1</Flammability>
-		  <Mass>3</Mass>
-		</statBases>
-		<!--todo: change-->
-		<comps>
-		  <li Class="CompProperties_ThingContainer">
-			<compClass>CompEggContainer</compClass>
-			<stackLimit>25</stackLimit>
-			<minCountToEmpty>20</minCountToEmpty>
-			<drawStackLabel>true</drawStackLabel>
-		  </li>
-		</comps>
-		<stuffCategories>
-		  <li>Metallic</li>
-		</stuffCategories>
-		<!--todo: change-->
-		<costStuffCount>20</costStuffCount>
 		<passability>Standable</passability>
 		<pathCost>20</pathCost>
 		<designationCategory>Misc</designationCategory>
@@ -117,21 +48,32 @@
 		  <ComponentIndustrial>4</ComponentIndustrial>
 		  <ComponentSpacer>1</ComponentSpacer>
 		</costList>
+		<!--todo: change-->
+		<comp>
+		  <li Class="CompProperties_Flickable"/>
+		  <li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<shortCircuitInRain>true</shortCircuitInRain>
+			<basePowerConsumption>200</basePowerConsumption>
+		  </li>
+		</comp>
+		<researchPrerequisites>
+		  <li>InterBaseTraveleing</li>
+		</researchPrerequisites>
 	</ThingDef>
-	
-	
+
 	<ThingDef ParentName="BuildingBase">
-		<defName>TeleportController</defName>
-		<label>teleporter controller</label>
-		<description>A computer to control the teleporters.</description>
+		<defName>TeleporterPanel</defName>
+		<label>teleporter panel</label>
+		<description>A panel to teleport items.</description>
 		<drawerType>MapMeshAndRealTime</drawerType>
-		<fillPercent>1</fillPercent>
-		<tickerType>normal</tickerType>
+		<fillPercent>0</fillPercent>
+		<tickerType>Normal</tickerType>
 		<drawGUIOverlay>true</drawGUIOverlay>
-		<canOverlapZones>false</canOverlapZones>
+		<canOverlapZones>true</canOverlapZones>
 		<!--todo: change-->
 		<graphicData>
-		  <texPath>Things/Building/Misc/EggBox</texPath>
+		  <texPath>Things/Building/Misc/AnimalBed</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shadowData>
 			<volume>(1,0.5,1)</volume>
@@ -152,21 +94,10 @@
 		  <Flammability>1</Flammability>
 		  <Mass>3</Mass>
 		</statBases>
-		<!--todo: change-->
-		<comps>
-		  <li Class="CompProperties_ThingContainer">
-			<compClass>CompEggContainer</compClass>
-			<stackLimit>25</stackLimit>
-			<minCountToEmpty>20</minCountToEmpty>
-			<drawStackLabel>true</drawStackLabel>
-		  </li>
-		</comps>
 		<stuffCategories>
 		  <li>Metallic</li>
 		</stuffCategories>
-		<!--todo: change-->
-		<costStuffCount>20</costStuffCount>
-		<passability>impassable</passability>
+		<passability>Standable</passability>
 		<pathCost>20</pathCost>
 		<designationCategory>Misc</designationCategory>
 		<rotatable>false</rotatable>
@@ -177,5 +108,81 @@
 		  <ComponentIndustrial>4</ComponentIndustrial>
 		  <ComponentSpacer>1</ComponentSpacer>
 		</costList>
+		<!--todo: change-->
+		<comp>
+		  <li Class="CompProperties_Flickable"/>
+		  <li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<shortCircuitInRain>true</shortCircuitInRain>
+			<basePowerConsumption>200</basePowerConsumption>
+		  </li>
+		</comp>
+		<researchPrerequisites>
+		  <li>InterBaseTraveleing</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>TeleportController</defName>
+		<label>teleporter controller</label>
+		<description>A computer to control the teleporters.</description>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<fillPercent>1</fillPercent>
+		<tickerType>Normal</tickerType>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<canOverlapZones>false</canOverlapZones>
+		<!--todo: change-->
+		<graphicData>
+		  <texPath>Things/Building/Misc/VitalsMonitor</texPath>
+		  <graphicClass>Graphic_Multi</graphicClass>
+		  <shadowData>
+			<volume>(1,0.5,1)</volume>
+		  </shadowData>
+		  <damageData>
+			<rect>(0,0,1,1)</rect>
+		  </damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+		  <li>BuildingsMisc</li>
+		</thingCategories>
+		<!--todo: change-->
+		<statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <WorkToBuild>2000</WorkToBuild>
+		  <Flammability>1</Flammability>
+		  <Mass>3</Mass>
+		</statBases>
+		<stuffCategories>
+		  <li>Metallic</li>
+		</stuffCategories>
+		<passability>Impassable</passability>
+		<pathCost>20</pathCost>
+		<designationCategory>Misc</designationCategory>
+		<rotatable>true</rotatable>
+		<!--todo: change-->
+		<costList>
+		  <Steel>180</Steel>
+		  <Uranium>5</Uranium>
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		  <ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
+		<hasInteractionCell>true</hasInteractionCell>
+		<!--todo: change-->
+		<comp>
+		  <li Class="CompProperties_Flickable"/>
+		  <li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<shortCircuitInRain>true</shortCircuitInRain>
+			<basePowerConsumption>200</basePowerConsumption>
+		  </li>
+		</comp>
+		<researchPrerequisites>
+		  <li>InterBaseTraveleing</li>
+		</researchPrerequisites>
 	</ThingDef>
 </Defs>
