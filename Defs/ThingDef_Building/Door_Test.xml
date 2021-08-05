@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>TeleporterDoor</defName>
+		<label>teleporter door</label>
+		<description>A door that allows pawns and animals to travel between bases.</description>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<fillPercent>1</fillPercent>
+		<tickerType>Never</tickerType>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<canOverlapZones>false</canOverlapZones>
+		<!--todo: change-->
+		<graphicData>
+		  <texPath>Things/Building/Misc/EggBox</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shadowData>
+			<volume>(1,0.5,1)</volume>
+		  </shadowData>
+		  <damageData>
+			<rect>(0,0,1,1)</rect>
+		  </damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+		  <li>BuildingsMisc</li>
+		</thingCategories>
+		<!--todo: change-->
+		<statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <WorkToBuild>2000</WorkToBuild>
+		  <Flammability>1</Flammability>
+		  <Mass>3</Mass>
+		</statBases>
+		<!--todo: change-->
+		<comps>
+		  <li Class="CompProperties_ThingContainer">
+			<compClass>CompEggContainer</compClass>
+			<stackLimit>25</stackLimit>
+			<minCountToEmpty>20</minCountToEmpty>
+			<drawStackLabel>true</drawStackLabel>
+		  </li>
+		</comps>
+		<stuffCategories>
+		  <li>Metallic</li>
+		</stuffCategories>
+		<!--todo: change-->
+		<costStuffCount>20</costStuffCount>
+		<passability>PassThroughOnly</passability>
+		<pathCost>20</pathCost>
+		<designationCategory>Misc</designationCategory>
+		<rotatable>false</rotatable>
+		<!--todo: change-->
+		<costList>
+		  <Steel>180</Steel>
+		  <Uranium>5</Uranium>
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		  <ComponentSpacer>1</ComponentSpacer>
+		</costList>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>TeleporterPanel</defName>
+		<label>teleporter panel</label>
+		<description>A panel to teleport items.</description>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<fillPercent>0</fillPercent>
+		<tickerType>normal</tickerType>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<canOverlapZones>true</canOverlapZones>
+		<!--todo: change-->
+		<graphicData>
+		  <texPath>Things/Building/Misc/EggBox</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shadowData>
+			<volume>(1,0.5,1)</volume>
+		  </shadowData>
+		  <damageData>
+			<rect>(0,0,1,1)</rect>
+		  </damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+		  <li>BuildingsMisc</li>
+		</thingCategories>
+		<!--todo: change-->
+		<statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <WorkToBuild>2000</WorkToBuild>
+		  <Flammability>1</Flammability>
+		  <Mass>3</Mass>
+		</statBases>
+		<!--todo: change-->
+		<comps>
+		  <li Class="CompProperties_ThingContainer">
+			<compClass>CompEggContainer</compClass>
+			<stackLimit>25</stackLimit>
+			<minCountToEmpty>20</minCountToEmpty>
+			<drawStackLabel>true</drawStackLabel>
+		  </li>
+		</comps>
+		<stuffCategories>
+		  <li>Metallic</li>
+		</stuffCategories>
+		<!--todo: change-->
+		<costStuffCount>20</costStuffCount>
+		<passability>Standable</passability>
+		<pathCost>20</pathCost>
+		<designationCategory>Misc</designationCategory>
+		<rotatable>false</rotatable>
+		<!--todo: change-->
+		<costList>
+		  <Steel>180</Steel>
+		  <Uranium>5</Uranium>
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		  <ComponentSpacer>1</ComponentSpacer>
+		</costList>
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="BuildingBase">
+		<defName>TeleportController</defName>
+		<label>teleporter controller</label>
+		<description>A computer to control the teleporters.</description>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<fillPercent>1</fillPercent>
+		<tickerType>normal</tickerType>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<canOverlapZones>false</canOverlapZones>
+		<!--todo: change-->
+		<graphicData>
+		  <texPath>Things/Building/Misc/EggBox</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shadowData>
+			<volume>(1,0.5,1)</volume>
+		  </shadowData>
+		  <damageData>
+			<rect>(0,0,1,1)</rect>
+		  </damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+		  <li>BuildingsMisc</li>
+		</thingCategories>
+		<!--todo: change-->
+		<statBases>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <WorkToBuild>2000</WorkToBuild>
+		  <Flammability>1</Flammability>
+		  <Mass>3</Mass>
+		</statBases>
+		<!--todo: change-->
+		<comps>
+		  <li Class="CompProperties_ThingContainer">
+			<compClass>CompEggContainer</compClass>
+			<stackLimit>25</stackLimit>
+			<minCountToEmpty>20</minCountToEmpty>
+			<drawStackLabel>true</drawStackLabel>
+		  </li>
+		</comps>
+		<stuffCategories>
+		  <li>Metallic</li>
+		</stuffCategories>
+		<!--todo: change-->
+		<costStuffCount>20</costStuffCount>
+		<passability>impassable</passability>
+		<pathCost>20</pathCost>
+		<designationCategory>Misc</designationCategory>
+		<rotatable>false</rotatable>
+		<!--todo: change-->
+		<costList>
+		  <Steel>180</Steel>
+		  <Uranium>5</Uranium>
+		  <ComponentIndustrial>4</ComponentIndustrial>
+		  <ComponentSpacer>1</ComponentSpacer>
+		</costList>
+	</ThingDef>
+</Defs>
